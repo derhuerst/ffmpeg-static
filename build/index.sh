@@ -30,6 +30,18 @@ download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-32bit-static.
 echo \t'extracting'
 tar -x -C bin/linux/ia32 --strip-components 1 -f linux-ia32.tar.xz --wildcards '*/ffmpeg'
 
+echo 'linux armhf 32bit'
+echo \t'downloading from johnvansickle.com'
+download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-armhf-32bit-static.tar.xz' linux-armhf.tar.xz
+echo \t'extracting'
+tar -x -C bin/linux/armhf --strip-components 1 -f linux-armhf.tar.xz --wildcards '*/ffmpeg'
+
+echo 'linux armel 32bit'
+echo \t'downloading from johnvansickle.com'
+download 'https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-armel-32bit-static.tar.xz' linux-armel.tar.xz
+echo \t'extracting'
+tar -x -C bin/linux/armel --strip-components 1 -f linux-armel.tar.xz --wildcards '*/ffmpeg'
+
 # todo: find latest version
 echo 'darwin x64 – downloading from evermeet.cx'
 download 'https://evermeet.cx/pub/ffmpeg/ffmpeg-3.3.3.7z' darwin-x64-ffmpeg.7z
